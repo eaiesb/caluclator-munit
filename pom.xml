@@ -26,14 +26,25 @@
 				<version>${mule.tools.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-                                   <cloudHubDeployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>3.9.1</muleVersion>
-						<username>srikanth_bathini</username>
-						<password>Eaiesb123</password>
-						<applicationName>calculator-munit</applicationName>
-						<environment>Sandbox</environment>
-					</cloudHubDeployment>
+                    <copyToAppsDirectory>true</copyToAppsDirectory>
+				<inclusions>
+                        <inclusion>
+                            <groupId>com.mulesoft.munit</groupId>
+                            <artifactId>munit-common</artifactId>
+                        </inclusion>
+                    <inclusion>
+                            <groupId>com.mulesoft.munit</groupId>
+                            <artifactId>munit-assert</artifactId>
+                        </inclusion>
+                    <inclusion>
+                            <groupId>com.mulesoft.modules</groupId>
+                            <artifactId>mule-interceptor-module</artifactId>
+                        </inclusion>
+                    <inclusion>
+                            <groupId>com.mulesoft.munit</groupId>
+                            <artifactId>munit-mock</artifactId>
+                        </inclusion>
+                    </inclusions>
                 </configuration>
 			</plugin>
 			<plugin>
@@ -240,3 +251,4 @@
     </pluginRepositories>
 
 </project>
+
